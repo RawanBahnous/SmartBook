@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartBook Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    
+  </head>
+  <body>
+    <!-- loading -->
+    <div id="loading">
+        <h1><i class="fa-solid fa-book-open"></i></h1>
+    </div>
+    <!-- popup register form -->
+    <div class="popup-register">
+        <form action="" id="regosterForm">
+            <h1>You Gonna Fill You library!</h1>
+            <div class="form-group">
+            <label for="fname">fname</label>
+            <input type="text" id="fname" placeholder="fname">
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+            <input type="email" id="email" placeholder="email">
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+            <input type="password" id="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <label for="address">address</label>
+            <input type="text" id="address" placeholder="address">
+            </div>
+            <div class="form-group">
+                <label for="age">age</label>
+            <input type="number" id="age" placeholder="age">
+            </div>
+            <button>Register</button>
+        </form>
+
+        <div class="close" onclick="closeReg()">
+            X
+        </div>
+    </div>
+
+     <!-- popup login form -->
+     <div class="popup-login">
+        <form action="" id="loginForm">
+            <h1>Welcome Again</h1>
+            <div class="form-group">
+                <label for="email">email</label>
+            <input type="email" id="email" placeholder="email">
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+            <input type="password" id="password" placeholder="password">
+            </div>
+        
+            <button>login</button>
+        </form>
+
+        <div class="close-login" onclick="closeLogin()">
+            X
+        </div>
+    </div>
+    <header class="nav">
+      <div class="heading">
+        <a href=""><i class="fa-solid fa-book-open"></i> SmartBook</a>
+      </div>
+      <div class="contain-search">
+        <input type="text" placeholder="Search" />
+        <label for="">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+      </div>
+      <div class="contain-icons">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </header>
+
+    <nav class="nav2">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">News</a></li>
+        <li><a onclick="openReg()">Register</a></li>
+        <li><a onclick="openLogin()">Login</a></li>
+      </ul>
+    </nav>
+
+    <nav class="bottom-nav">
+      
+          <a href="index.html">
+            <i class="fa-solid fa-house-chimney"></i> Home</a
+          >
+          <a href=""><i class="fa-solid fa-list"></i> About</a>
+        <a href=""> <i class="fa-solid fa-newspaper"></i> News</a>
+        <a onclick="openReg()"><i class="fa-solid fa-user"></i> Register</a>
+        <a onclick="openLogin()"><i class="fa-solid fa-user"></i>Login</a>
+      </ul>
+    </nav>
+
+
+    <!-- home header section -->
+
+    <section class="home">
+        <div class="contain-content">
+            <h2>Welcome to smartbook website</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatibus quos architecto cum dicta non qui quia ullam rerum fuga illum tempore unde eius eaque et ducimus neque, ab aut!</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="contain-slider">
+            <a href="#" id="nextButton">Next</a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="contain-slider">
+            <a href="#"  onclick="nextSlide()">next</a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/3.jpg" alt="">
+                </div>
+            </div>
+        </div> -->
+    </section>
+    
+   
+    <!-- features section -->
+    <section class="features">
+<div class="col-3">
+    <p><i class="fa-solid fa-truck-fast"></i>free shipping</p>
+</div>
+<div class="col-3">
+    <p><i class="fa-solid fa-lock"></i>secuere payment</p>
+
+</div>
+<div class="col-3">
+    <p><i class="fa-solid fa-rotate-left"></i>easy returns</p>
+
+</div>
+<div class="col-3">
+    <p><i class="fa-solid fa-headset"></i> 24/7 support</p>
+
+</div>
+
+    </section>
+
+    <!-- best Books section -->
+    <section class="best-books"></section>
+
+    <!-- Contact -->
+    <section class="contact"></section>
+
+    <!-- News Books section -->
+    <section class="news-books">
+        <h2>new arrivals</h2>
+        <div class="contain-news-cards">
+            <a onclick="nextNew()">></a>
+            <div class="new-card">
+    <div class="contain-img">
+    <img src="images/th (1).jpg" alt="">
+    </div>
+    <div class="contain-content">
+    <h6>new arrivals</h6>
+    <p>$15.99</p>
+    </div>
+
+            </div>
+            <div class="new-card">
+                <div class="contain-img">
+                <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="contain-content">
+                <h6>new arrivals</h6>
+                <p>$15.99</p>
+                </div>
+            
+            </div>
+            <div class="new-card">
+                            <div class="contain-img">
+                            <img src="images/th (1).jpg" alt="">
+                            </div>
+                            <div class="contain-content">
+                            <h6>new arrivals</h6>
+                            <p>$15.99</p>
+                            </div>
+                        
+           </div>
+           <div class="new-card">
+            <div class="contain-img">
+            <img src="images/2.jpg" alt="">
+            </div>
+            <div class="contain-content">
+            <h6>new arrivals</h6>
+            <p>$15.99</p>
+            </div>
+        
+        </div>
+        <div class="new-card">
+                        <div class="contain-img">
+                        <img src="images/1.jpg" alt="">
+                        </div>
+                        <div class="contain-content">
+                        <h6>new arrivals</h6>
+                        <p>$15.99</p>
+                        </div>
+                    
+       </div>
+        </div>
+        <div class="contain-news-cards">
+            <div class="new-card">
+    <div class="contain-img">
+    <img src="images/th (1).jpg" alt="">
+    </div>
+    <div class="contain-content">
+    <h6>new arrivals</h6>
+    <p>$15.99</p>
+    </div>
+
+            </div>
+            <div class="new-card">
+                <div class="contain-img">
+                <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="contain-content">
+                <h6>new arrivals</h6>
+                <p>$15.99</p>
+                </div>
+            
+            </div>
+            <div class="new-card">
+                            <div class="contain-img">
+                            <img src="images/th (1).jpg" alt="">
+                            </div>
+                            <div class="contain-content">
+                            <h6>new arrivals</h6>
+                            <p>$15.99</p>
+                            </div>
+                        
+           </div>
+        </div>
+    </section>
+
+    <!-- offers section -->
+    <section class="contain-offers">
+        <div class="offers-content">
+            <p>Deal of The day </p>
+            <h3>up to 50% off</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, amet corrupti? Excepturi ullam quis tempore nobis est. Dolorum dolore itaque laboriosam eum dolorem quo quasi tempora delectus sit, aliquam ullam.</p>
+        <button>Shop now</button>
+        </div>
+        <div class="offers-img">
+            <img src="images/th (1).jpg" alt="">
+        </div>
+    </section>
+
+    <!-- reviews section -->
+
+    <section class="reviwes">
+        <h2>Clients Reviews</h2>
+        <div class="contain-reviewscards">
+          <a onclick="onotherRev()" id="reviw"><</a>
+          <div class="card-review">
+            <div class="rev-img">
+              <img src="images/th (1).jpg" alt="">
+            </div>
+            <div class="rev-title">
+              <h3>John Deo</h3>
+            </div>
+            <div class="rev-p">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sunt voluptatum, omnis nesciunt libero amet quidem quod optio deserunt et laudantium sequi? Eius odio rerum soluta reiciendis. Repellendus, odio alias.</p>
+            </div>
+            <div class="rev-rate"></div>
+          </div>
+          <div class="card-review">
+            <div class="rev-img">
+              <img src="images/th (1).jpg" alt="">
+            </div>
+            <div class="rev-title">
+              <h3>John Deo</h3>
+            </div>
+            <div class="rev-p">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sunt voluptatum, omnis nesciunt libero amet quidem quod optio deserunt et laudantium sequi? Eius odio rerum soluta reiciendis. Repellendus, odio alias.</p>
+            </div>
+            <div class="rev-rate"></div>
+          </div>
+          <div class="card-review">
+            <div class="rev-img">
+              <img src="images/th (1).jpg" alt="">
+            </div>
+            <div class="rev-title">
+              <h3>John Deo</h3>
+            </div>
+            <div class="rev-p">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sunt voluptatum, omnis nesciunt libero amet quidem quod optio deserunt et laudantium sequi? Eius odio rerum soluta reiciendis. Repellendus, odio alias.</p>
+            </div>
+            <div class="rev-rate"></div>
+          </div>
+          <div class="card-review">
+            <div class="rev-img">
+              <img src="images/2.jpg" alt="">
+            </div>
+            <div class="rev-title">
+              <h3>John Deo</h3>
+            </div>
+            <div class="rev-p">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sunt voluptatum, omnis nesciunt libero amet quidem quod optio deserunt et laudantium sequi? Eius odio rerum soluta reiciendis. Repellendus, odio alias.</p>
+            </div>
+            <div class="rev-rate"></div>
+          </div>
+          <div class="card-review">
+            <div class="rev-img">
+              <img src="images/2.jpg" alt="">
+            </div>
+            <div class="rev-title">
+              <h3>John Deo</h3>
+            </div>
+            <div class="rev-p">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sunt voluptatum, omnis nesciunt libero amet quidem quod optio deserunt et laudantium sequi? Eius odio rerum soluta reiciendis. Repellendus, odio alias.</p>
+            </div>
+            <div class="rev-rate"></div>
+          </div>
+          <div class="card-review">
+            <div class="rev-img">
+              <img src="images/2.jpg" alt="">
+            </div>
+            <div class="rev-title">
+              <h3>John Deo</h3>
+            </div>
+            <div class="rev-p">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sunt voluptatum, omnis nesciunt libero amet quidem quod optio deserunt et laudantium sequi? Eius odio rerum soluta reiciendis. Repellendus, odio alias.</p>
+            </div>
+            <div class="rev-rate"></div>
+          </div>
+        </div>
+      </section>
+    <!-- blogs section -->
+
+    <section class="contain-blogs">
+        <h2>Our blogs</h2>
+        <div class="contain-cards">
+            <div class="blog-card">
+                <div class="contain-imgcard">
+                    <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="contain-content">
+                    <h3>Title Here</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa consequuntur alias porro sint provident nobis dolore cumque error necessitatibus similique explicabo ratione laborum dignissimos quia, reprehenderit quo voluptas nesciunt non?</p>
+                </div>
+                <div class="contain-btn">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="contain-imgcard">
+                    <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="contain-content">
+                    <h3>Title Here</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa consequuntur alias porro sint provident nobis dolore cumque error necessitatibus similique explicabo ratione laborum dignissimos quia, reprehenderit quo voluptas nesciunt non?</p>
+                </div>
+                <div class="contain-btn">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="contain-imgcard">
+                    <img src="images/th (1).jpg" alt="">
+                </div>
+                <div class="contain-content">
+                    <h3>Title Here</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa consequuntur alias porro sint provident nobis dolore cumque error necessitatibus similique explicabo ratione laborum dignissimos quia, reprehenderit quo voluptas nesciunt non?</p>
+                </div>
+                <div class="contain-btn">
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="contain-links">
+            <div class="col-3">
+                <h1>Our Locations</h1>
+                <p>Egypt</p>
+                <p>USA</p>
+                <p>Cairo</p>
+            </div>
+            <div class="col-3">
+                <h1>Our Locations</h1>
+                <p>Egypt</p>
+                <p>USA</p>
+                <p>Cairo</p>
+                <p>Egypt</p>
+                <p>USA</p>
+                <p>Cairo</p><p>Egypt</p>
+                <p>USA</p>
+                <p>Cairo</p>
+            </div>
+            <div class="col-3">
+                <h1>Our Locations</h1>
+                <p>Egypt</p>
+                <p>USA</p>
+                <p>Cairo</p>
+            </div>
+            <div class="col-3">
+                <h1>Our Locations</h1>
+                <p>Egypt</p>
+                <p>USA</p>
+                <p>Cairo</p>
+            </div>
+        </div>
+        <div class="contain-icons">
+            <i class="fa-solid fa-book-open"></i><i class="fa-solid fa-book-open"></i><i class="fa-solid fa-book-open"></i><i class="fa-solid fa-book-open"></i><i class="fa-solid fa-book-open"></i>
+            
+        </div>
+        <div class="contain-rights">
+            <p>Created by Rawan | All Rights Reseved!</p>
+        </div>
+
+    </footer>
+
+
+    
+    <script src="js/js.js"></script>
+    <script>
+
+        //loading
+
+        window.addEventListener("load",()=>{
+            var loadingElement = document.getElementById('loading');
+
+            setTimeout(()=>{
+                loadingElement.style.display="none";
+            },2000);
+
+        })
+          // Slider
+
+      var slides = document.querySelectorAll(".swiper-slide");
+      var curIndex = 0;
+      var itemsPerSlide = 3;
+      var totalSlides = slides.length;
+
+      showSlides();
+
+      function showSlides() {
+        var startIndex = curIndex;
+        var endIndex = startIndex + itemsPerSlide;
+        for (var i = 0; i < totalSlides; i++) {
+          if (i >= startIndex && i < endIndex) {
+            slides[i].style.display = "block";
+          } else {
+            slides[i].style.display = "none";
+          }
+        }
+      }
+
+      document.getElementById("nextButton").addEventListener("click", nextSlide);
+
+      function nextSlide() {
+        if (curIndex < totalSlides / itemsPerSlide - 1) {
+          curIndex++;
+        } else {
+          curIndex = 0;
+        }
+        showSlides();
+      }
+      
+      // reviews slider 
+      let slidesRev = document.querySelectorAll(".card-review");
+      let curIndexRev = 0;
+      let totalReviews = slidesRev.length;
+      let revPerslide = 3;
+    
+      showReviews();
+    
+      function showReviews() {
+        for (let i = 0; i < totalReviews; i++) {
+          if (i >= curIndexRev && i < curIndexRev + revPerslide) {
+            slidesRev[i].style.display = "block";
+          } else {
+            slidesRev[i].style.display = "none";
+          }
+        }
+      }
+    
+      function onotherRev() {
+        if (curIndexRev < totalReviews - revPerslide) {
+          curIndexRev++;
+        } else {
+          curIndexRev = 0;
+        }
+        showReviews();
+      }
+    
+
+
+      //news
+
+      let newsSlides = document.querySelectorAll('.new-card');
+      let totalNews = newsSlides.length;
+      let newsPerSlide = 3;
+      let currNew=0;
+      showNews();
+      function showNews() {
+        for (let i = 0; i < totalNews; i++) {
+          if (i >= currNew && i < currNew + newsPerSlide) {
+            newsSlides[i].style.display = "block";
+          } else {
+            newsSlides[i].style.display = "none";
+          }
+        }
+      }
+      
+      function nextNew() {
+        if (currNew + newsPerSlide < totalNews) {
+          currNew += newsPerSlide;
+        } else {
+          currNew = 0;
+        }
+        showNews();
+      }
+      
+    </script>
+  </body>
+</html>
